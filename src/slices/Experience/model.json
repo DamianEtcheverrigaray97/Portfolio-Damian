@@ -1,0 +1,73 @@
+{
+  "id": "experience",
+  "type": "SharedSlice",
+  "name": "Experience",
+  "description": "Experience",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "work": {
+          "type": "Group",
+          "config": {
+            "label": "Work Experience",
+            "repeat": true,
+            "fields": {
+              "start_date": {
+                "type": "Date",
+                "config": {
+                  "label": "Start Date",
+                  "placeholder": ""
+                }
+              },
+              "end_date": {
+                "type": "Date",
+                "config": {
+                  "label": "End Date",
+                  "placeholder": ""
+                }
+              },
+              "company_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Company Name",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "company_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Company Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "position": {
+                "type": "Text",
+                "config": {
+                  "label": "Position",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
