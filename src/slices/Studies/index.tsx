@@ -2,9 +2,8 @@ import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import { Content, isFilled } from "@prismicio/client";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
-import { FaArrowUpRightFromSquare, FaDownload } from "react-icons/fa6";
 
 /**
  * Props for `Studies`.
