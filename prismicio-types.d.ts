@@ -168,6 +168,7 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type PagesDocumentDataSlicesSlice =
+  | StudiesSlice
   | ExperienceSlice
   | ContentIndexSlice
   | TechListSlice
@@ -855,6 +856,126 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Item in *Studies → Default → Primary → Studies*
+ */
+export interface StudiesSliceDefaultPrimaryStudiesItem {
+  /**
+   * University Name field in *Studies → Default → Primary → Studies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies.default.primary.studies[].university_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  university_name: prismic.KeyTextField;
+
+  /**
+   * Start Date field in *Studies → Default → Primary → Studies*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies.default.primary.studies[].start_date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  start_date: prismic.DateField;
+
+  /**
+   * End Date field in *Studies → Default → Primary → Studies*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies.default.primary.studies[].end_date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  end_date: prismic.DateField;
+
+  /**
+   * University Image field in *Studies → Default → Primary → Studies*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies.default.primary.studies[].university_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  university_image: prismic.ImageField<never>;
+
+  /**
+   * Name University Degree field in *Studies → Default → Primary → Studies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies.default.primary.studies[].name_university_degree
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name_university_degree: prismic.KeyTextField;
+
+  /**
+   * Description field in *Studies → Default → Primary → Studies*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies.default.primary.studies[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Ratings field in *Studies → Default → Primary → Studies*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies.default.primary.studies[].ratings
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  ratings: prismic.LinkToMediaField;
+}
+
+/**
+ * Primary content in *Studies → Default → Primary*
+ */
+export interface StudiesSliceDefaultPrimary {
+  /**
+   * Studies field in *Studies → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies.default.primary.studies[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  studies: prismic.GroupField<Simplify<StudiesSliceDefaultPrimaryStudiesItem>>;
+}
+
+/**
+ * Default variation for Studies Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StudiesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<StudiesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Studies*
+ */
+type StudiesSliceVariation = StudiesSliceDefault;
+
+/**
+ * Studies Shared Slice
+ *
+ * - **API ID**: `studies`
+ * - **Description**: Studies
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StudiesSlice = prismic.SharedSlice<
+  "studies",
+  StudiesSliceVariation
+>;
+
+/**
  * Item in *TechList → Default → Primary → Items*
  */
 export interface TechListSliceDefaultPrimaryItemsItem {
@@ -1069,6 +1190,11 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      StudiesSlice,
+      StudiesSliceDefaultPrimaryStudiesItem,
+      StudiesSliceDefaultPrimary,
+      StudiesSliceVariation,
+      StudiesSliceDefault,
       TechListSlice,
       TechListSliceDefaultPrimaryItemsItem,
       TechListSliceDefaultPrimary,

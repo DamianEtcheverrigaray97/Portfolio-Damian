@@ -1,0 +1,105 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"studies": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"university_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "porch",
+									"type": "Text"
+								}
+							],
+							[
+								"start_date",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2022-10-25"
+								}
+							],
+							[
+								"end_date",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2021-06-07"
+								}
+							],
+							[
+								"university_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+										"width": 4160,
+										"height": 3120
+									},
+									"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+									"width": 4160,
+									"height": 3120,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"credits": null,
+									"alt": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"name_university_degree",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "capital",
+									"type": "Text"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Excepteur deserunt aliqua officia voluptate occaecat. Ex aliquip aliqua nisi sunt sint irure eu nisi eu incididunt dolor tempor aliqua officia. Sit dolor aliqua amet deserunt proident sint sunt aliqua Lorem."
+											}
+										}
+									]
+								}
+							],
+							[
+								"ratings",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"id": "mock_Media_link",
+										"kind": "image/jpeg",
+										"name": "mock_name",
+										"url": "https://source.unsplash.com/daily",
+										"size": "0",
+										"__TYPE__": "FileLink"
+									}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

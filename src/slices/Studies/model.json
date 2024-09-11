@@ -1,0 +1,81 @@
+{
+  "id": "studies",
+  "type": "SharedSlice",
+  "name": "Studies",
+  "description": "Studies",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "studies": {
+          "type": "Group",
+          "config": {
+            "label": "Studies",
+            "repeat": true,
+            "fields": {
+              "university_name": {
+                "type": "Text",
+                "config": {
+                  "label": "University Name",
+                  "placeholder": ""
+                }
+              },
+              "start_date": {
+                "type": "Date",
+                "config": {
+                  "label": "Start Date",
+                  "placeholder": ""
+                }
+              },
+              "end_date": {
+                "type": "Date",
+                "config": {
+                  "label": "End Date",
+                  "placeholder": ""
+                }
+              },
+              "university_image": {
+                "type": "Image",
+                "config": {
+                  "label": "University Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "name_university_degree": {
+                "type": "Text",
+                "config": {
+                  "label": "Name University Degree",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "ratings": {
+                "type": "Link",
+                "config": {
+                  "label": "Ratings",
+                  "placeholder": "",
+                  "select": "media"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

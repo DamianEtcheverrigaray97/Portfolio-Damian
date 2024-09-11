@@ -45,10 +45,12 @@ const Experience = ({ slice }: ExperienceProps): JSX.Element => {
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                     {job.company_name}
                   </h3>
-                  <p className="text-lg text-gray-400 dark:text-gray-500">
+                  <p className="text-lg text-gray-400 dark:text-gray-200">
                     {job.position}
-                    {job.start_date && ` • ${job.start_date}`}
-                    {job.end_date ? ` - ${job.end_date}` : " - Actualidad"}
+                  </p>
+                  <p className="text-lg text-gray-400 dark:text-gray-400">
+                    {job.start_date && ` ${job.start_date}`}
+                    {job.end_date ? ` / ${job.end_date}` : " - Actualidad"}
                   </p>
                 </div>
               </div>
