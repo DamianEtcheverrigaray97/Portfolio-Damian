@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import React, { useState } from "react";
 import { Content, KeyTextField, asLink } from "@prismicio/client";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 import { MdMenu, MdClose } from "react-icons/md";
 import Button from "./Button";
