@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import React, { useState } from "react";
 import { Content, KeyTextField, asLink } from "@prismicio/client";
-import { PrismicNextLink } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 import { MdMenu, MdClose } from "react-icons/md";
 import Button from "./Button";
@@ -23,6 +23,14 @@ export default function NavBar({
         <div className="flex items-center justify-between">
           <NameLogo name={settings.data.name} />
           
+          {/* {settings.data.logo?.url && (
+                  <PrismicNextImage
+                    field={settings.data.logo}
+                    className="w-16 h-16 object-cover rounded-full"
+                    alt={""}
+                  />
+          )} */}
+
           <button
             aria-expanded={open}
             aria-label="Open menu"

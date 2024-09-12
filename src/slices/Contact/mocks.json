@@ -1,0 +1,45 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subject": {
+				"__TYPE__": "FieldContent",
+				"value": "fix",
+				"type": "Text"
+			},
+			"message": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Veniam non voluptate consectetur voluptate officia tempor."
+						}
+					}
+				]
+			},
+			"template_id": {
+				"__TYPE__": "FieldContent",
+				"value": "floor",
+				"type": "Text"
+			},
+			"public_key": {
+				"__TYPE__": "FieldContent",
+				"value": "got",
+				"type": "Text"
+			},
+			"from_name": {
+				"__TYPE__": "FieldContent",
+				"value": "wood",
+				"type": "Text"
+			},
+			"service_id": {
+				"__TYPE__": "FieldContent",
+				"value": "drive",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

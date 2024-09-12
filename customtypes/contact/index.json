@@ -1,38 +1,17 @@
 {
   "format": "page",
-  "id": "pages",
-  "label": "Page",
-  "repeatable": true,
+  "id": "contact",
+  "label": "Contact",
+  "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "UID"
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
             "contact": {
-              "type": "SharedSlice"
-            },
-            "studies": {
-              "type": "SharedSlice"
-            },
-            "experience": {
-              "type": "SharedSlice"
-            },
-            "content_index": {
-              "type": "SharedSlice"
-            },
-            "tech_list": {
-              "type": "SharedSlice"
-            },
-            "biography": {
               "type": "SharedSlice"
             }
           }
