@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MdArrowOutward } from "react-icons/md";
 import { Content } from "@prismicio/client";
+import { formatDateFull } from "@/utils/FormatDate";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,7 +111,7 @@ export default function ContentList({
     setHovering(false);
     setCurrentItem(null);
   };
-  console.log(items)
+
   const contentImages = items.map((item) => {
     const image = isFilled.image(item.data.hover_image)
       ? item.data.hover_image
@@ -131,6 +132,7 @@ export default function ContentList({
       img.src = url;
     });
   }, [contentImages]);
+
 
   return (
     <>
@@ -162,6 +164,9 @@ export default function ContentList({
                     </span>
                   ))}
                 </div>
+                <span className="text-lg font-bold text-gray-400">
+                   {formatDateFull(post.data.date)}
+                </span>
               </div>
               <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
                 {viewMoreText} <MdArrowOutward />

@@ -42,7 +42,7 @@ const Studies = ({ slice }: StudiesProps): JSX.Element => {
                   />
                 )}
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-2xl font-bold dark:text-white">
                     {job.university_name}
                   </h3>
                   <p className="text-lg text-gray-400 dark:text-gray-200">
