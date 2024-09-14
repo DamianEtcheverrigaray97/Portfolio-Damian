@@ -3,9 +3,10 @@
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import { useState } from "react";
-import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { Content, isFilled } from "@prismicio/client";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import emailjs from 'emailjs-com'; // Asegúrate de tener instalado emailjs-com
+import ButtonSimple from "@/components/Button_simple";
 
 /**
  * Props for `Contact`.
@@ -62,47 +63,44 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <Heading size="xl" className="col-start-1 text-center">
-        Get in Touch
+        {slice.primary.heading}
       </Heading>
-
+      
+      {isFilled.richText(slice.primary.description) && (
+        <div className="col-start-1 text-center mx-auto prose prose-xl prose-invert mb-10 mt-10">
+          <PrismicRichText field={slice.primary.description} />
+        </div>
+      )}
+      
       <form
-        id="myForm" // Identificador para emailjs.sendForm
+        id="myForm"
         onSubmit={handleSubmit}
-        className="mt-8 space-y-6 max-w-lg mx-auto"
+        className="mt-8 space-y-12 w-full max-w-2xl mx-auto rounded-lg" // Cambié max-w-lg por max-w-2xl y añadí w-full para mayor ancho
       >
         <div>
-          <label htmlFor="username" className="block text-base font-medium text-gray-700 dark:text-white">
-            Username
-          </label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-            className="mt-2 block w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 dark:text-white text-base"
-            required
-          />
-        </div>
-
-        <div>
-          <label htmlFor="emailFrom" className="block text-base font-medium text-gray-700 dark:text-white">
+          <label
+            htmlFor="emailFrom"
+            className="block text-2xl font-bold text-gray-200 mb-23"
+          >
             Email
           </label>
           <input
-            type="text"
+            type="email"
             id="emailFrom"
             name="emailFrom"
             value={formData.emailFrom}
             onChange={handleChange}
-            className="mt-2 block w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 dark:text-white text-base"
+            className="mt-2 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 text-base"
             required
           />
         </div>
 
         <div>
-          <label htmlFor="subject" className="block text-base font-medium text-gray-700 dark:text-white">
-            Subject
+          <label
+            htmlFor="subject"
+            className="block text-2xl font-bold text-gray-300 mb-2"
+          >
+            Asunto
           </label>
           <input
             type="text"
@@ -110,14 +108,17 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            className="mt-2 block w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 dark:text-white text-base"
+            className="mt-2 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 text-base"
             required
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-base font-medium text-gray-700 dark:text-white">
-            Message
+          <label
+            htmlFor="message"
+            className="block text-2xl font-bold text-gray-200 mb-2"
+          >
+            Mensaje
           </label>
           <textarea
             id="message"
@@ -125,20 +126,23 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
             value={formData.message}
             onChange={handleChange}
             rows={5}
-            className="mt-2 block w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 dark:text-white text-base"
+            className="mt-2 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900 text-base"
             required
           />
         </div>
-
-        <div>
-          <button
+        <div className="flex justify-end">
+          <ButtonSimple
+            label="Enviar"
             type="submit"
-            className="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-base"
-          >
-            Send Message
-          </button>
+            className="w-auto px-12 py-3 bg-blue-600 font-bold rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200"
+          />
         </div>
+        
+
+
       </form>
+
+
     </Bounded>
   );
 };

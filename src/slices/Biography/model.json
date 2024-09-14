@@ -51,13 +51,6 @@
             "constraint": {},
             "thumbnails": []
           }
-        },
-        "test": {
-          "type": "Text",
-          "config": {
-            "label": "test",
-            "placeholder": ""
-          }
         }
       },
       "items": {}

@@ -38,6 +38,22 @@
 				"__TYPE__": "FieldContent",
 				"value": "drive",
 				"type": "Text"
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "thread",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Et nisi qui amet laborum esse cupidatat elit voluptate minim ad anim id. Ex est laborum est duis exercitation excepteur deserunt proident minim magna fugiat ut sunt. Do veniam et laboris nulla."
+						}
+					}
+				]
 			}
 		},
 		"items": []

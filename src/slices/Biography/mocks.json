@@ -53,11 +53,6 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
-			},
-			"test": {
-				"__TYPE__": "FieldContent",
-				"value": "upper",
-				"type": "Text"
 			}
 		},
 		"items": []
