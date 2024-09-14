@@ -1,5 +1,5 @@
 import React from "react";
-import { MdArrowOutward, MdSend } from "react-icons/md";
+import { MdSend } from "react-icons/md";
 import clsx from "clsx";
 
 type ButtonProps = {
